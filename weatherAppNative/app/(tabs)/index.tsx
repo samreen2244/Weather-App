@@ -33,7 +33,7 @@ interface WeatherData {
 export default function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState<WeatherData | null>(null);
-  const apiKey = "11caa159dd2f89be7b3ceea39f2be22f"; // Replace with your OpenWeatherMap API key
+  const apiKey = "e345f5cc0ea48cd7ca92b61b254117f0"; // Replace with your OpenWeatherMap API key
 
   const getWeather = async () => {
     if (!city) return;
@@ -93,7 +93,7 @@ export default function App() {
       {weather && (
         <View style={styles.result}>
           <Text style={styles.city}>{weather.name}</Text>
-          <Text style={styles.sectionTitle}>Zoha Imran</Text>
+          <Text style={styles.sectionTitle}>Samreen Bibi</Text>
             <Text style={styles.bigTemp}>{Math.round(weather.main.temp)}°</Text>
             <Text style={styles.conditionText}>☁️ {weather.weather[0].main}</Text>
             <Text style={styles.minMax}>H: {weather.main.temp_max != null ? Math.round(weather.main.temp_max) + '°' : '--'}  L: {weather.main.temp_min != null ? Math.round(weather.main.temp_min) + '°' : '--'}</Text>
